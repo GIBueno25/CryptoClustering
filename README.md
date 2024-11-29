@@ -1,14 +1,14 @@
 # **Cryptocurrency Clustering Analysis**
 
-This project applies clustering techniques to cryptocurrency market data to group cryptocurrencies based on their price change percentages over various time intervals. Principal Component Analysis (PCA) is also employed to reduce the dimensionality of the data while preserving most of the variance.
+This challenge applies clustering techniques to cryptocurrency market data to group cryptocurrencies based on their price change percentages over various time intervals. Principal Component Analysis (PCA) is also employed to reduce the dimensionality of the data while preserving most of the variance.
 
 ## **Overview**
 
 The analysis follows these steps:
 
-    Data Preprocessing:
+    Data Processing:
         Load the cryptocurrency market data.
-        Standardize the data using StandardScaler to normalize feature scales.
+        Normalize the data using Standard Scaler.
 
     K-Means Clustering:
         Apply K-Means clustering to identify groups of cryptocurrencies.
@@ -16,22 +16,21 @@ The analysis follows these steps:
 
     Dimensionality Reduction:
         Perform PCA to reduce the data to three principal components.
-        Recompute the optimal k using the PCA-transformed data.
+        Compute the optimal k using the PCA-transformed data.
 
     Visualization:
-        Plot clusters using scatter plots to observe grouping patterns.
-        Analyze the feature weights for each principal component to understand key influences.
+        Plot clusters using scatter plots and observe grouping patterns.
+        Analyze the feature weights for each principal component to determine key influences.
 
-## **Key Findings**
+## **Findings**
 
     Optimal Number of Clusters:
-        The Elbow Method indicates the best value for k is 4, both for the original and PCA-transformed data.
+        The Elbow Method indicates that the best value for k is 4. There is no difference in the best k value between using the original and PCA-transformed data.
 
     Explained Variance:
-        The first three principal components account for 89.5% of the total variance, ensuring minimal information loss.
+        The three principal components account for 89.5% of the total variance.
 
     Feature Influence:
-        PCA1: Strongest influence from price_change_percentage_200d (+0.59).
-        PCA2: Strongest influence from price_change_percentage_30d (+0.56).
-        PCA3: Strongest influence from price_change_percentage_7d (+0.79).
-
+        PCA1: At +0.59, price_change_percentage_200d has the strongest influence on PCA1.
+        PCA2: At +0.56, price_change_percentage_30d has the strongest influence on PCA2.
+        PCA3: At +0.79, price_change_percentage_7d has the strongest influence on PCA3.
